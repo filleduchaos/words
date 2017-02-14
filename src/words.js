@@ -5,7 +5,7 @@ module.exports = {
 		var result = {};
 
 		if (typeof str === 'string') {
-			var splitstr = str.split(" ");
+			var splitstr = str.split(/\s/);
 			var uniquestr = splitstr.filter(function(item, i, str){ return str.indexOf(item) === i; });
 
 			for (var i = 0; i < uniquestr.length; i++) {
@@ -28,5 +28,3 @@ module.exports = {
 		return count;
 	}
 }
-
-console.log(module.exports.words("I am a girl I am a boy"));
